@@ -14,6 +14,9 @@ This PowerShell script compresses video files in a specified directory and its s
 
 - **PowerShell**: This script is designed to run in a PowerShell environment.
 - **7-Zip**: Required for extracting the FFmpeg archive. Ensure it is installed and the path is correct in the script.
+```
+C:\Program Files\7-Zip\7z.exe
+```
 
 ## Getting Started
 
