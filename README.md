@@ -5,7 +5,6 @@ This PowerShell script compresses video files in a specified directory and its s
 ## Features
 
 - Checks if FFmpeg is installed and installs it if not.
-- https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl-shared.zip
 - Recursively processes video files in the specified directory.
 - Compresses videos and saves them in a separate "compressed" directory.
 - Logs the output of the compression process.
