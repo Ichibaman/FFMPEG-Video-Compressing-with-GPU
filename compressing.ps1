@@ -1,3 +1,17 @@
+# Check for administrative privileges
+function Test-Admin {
+    $currentIdentity = [System.Security.Principal.WindowsIdentity]::GetCurrent()
+    $principal = New-Object System.Security.Principal.WindowsPrincipal($currentIdentity)
+    return $principal.IsInRole([System.Security.Principal.WindowsBuiltInRole]::Administrator)
+}
+
+# Relaunch the script with administrative privileges if not already running as admin
+if (-not (Test-Admin)) {
+    $arguments = "& '" + $MyInvocation.MyCommand.Path + "'"
+    Start-Process powershell -ArgumentList $arguments -Verb RunAs
+    exit
+}
+
 # Function to check if FFmpeg is installed
 function Check-FFmpeg {
     $ffmpegPath = Get-Command ffmpeg -ErrorAction SilentlyContinue
@@ -101,9 +115,6 @@ function Remove-ControlFile {
 # Register event handlers
 Register-EngineEvent PowerShell.Exiting -Action { Remove-ControlFile }
 
-# Register Ctrl+C handler
-$handler = Register-ObjectEvent -InputObject $host -EventName "KeyDown" -Action { Stop-Script }
-
 # Start processing videos
 Process-Videos $rootDir
 
@@ -111,3 +122,6 @@ Process-Videos $rootDir
 if ($handler -ne $null) {
     Unregister-Event -SourceIdentifier $handler.SourceIdentifier
 }
+
+# Prompt the user to press any key before exiting
+Read-Host -Prompt "Press Enter to exit"
