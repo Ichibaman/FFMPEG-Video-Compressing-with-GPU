@@ -12,7 +12,7 @@ function Check-FFmpeg {
 # Function to install FFmpeg
 function Install-FFmpeg {
     # Download the latest FFmpeg release
-    $ffmpegUrl = "https://ffmpeg.org/releases/ffmpeg-release-full.7z"
+    $ffmpegUrl = "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl-shared.zip"
     $outputPath = "$env:TEMP\ffmpeg.7z"
 
     # Download the FFmpeg archive
