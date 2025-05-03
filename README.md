@@ -22,14 +22,18 @@ This PowerShell script compresses video files in a specified directory and its s
 Clone this repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/yourusername/repository-name.git
+git clone https://github.com/Ichibaman/FFMPEG-Video-Compressing-with-GPU.git
 ```
 
-### Step 2: Open PowerShell
+### Step 2: Copy Video Files
+
+Copy and paste the video files you want to compress into the same directory where the `compressing.ps1` script is located.
+
+### Step 3: Open PowerShell
 
 Open PowerShell as an administrator to ensure you have the necessary permissions to install software and modify system environment variables.
 
-### Step 3: Run the Script
+### Step 4: Run the Script
 
 1. Navigate to the directory where the script is located:
 
@@ -43,13 +47,13 @@ Open PowerShell as an administrator to ensure you have the necessary permissions
    .\compressing.ps1
    ```
 
-### Step 4: Monitor the Process
+### Step 5: Monitor the Process
 
 - The script will check for FFmpeg installation and install it if necessary.
 - It will create a `compressed` directory in the same location as the script to store the compressed videos.
 - The script logs the output of the compression process in `compress_videos.log`.
 
-### Step 5: Stop the Script (Optional)
+### Step 6: Stop the Script (Optional)
 
 - To stop the script while it is running, you can create a control file by pressing `Ctrl+C`. This will stop the execution after the current video is processed.
 
