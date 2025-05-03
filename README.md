@@ -129,9 +129,7 @@ Here are a few example combinations of parameters you might choose based on diff
    ```bash
    ffmpeg -i input.mp4 -c:v h264_nvenc -preset fast -b:v 5M -r 30 -c:a copy output.mp4
    ```
-
-### Conclusion
-
+   
 When configuring the FFmpeg command, consider the trade-offs between quality, file size, and processing speed. Adjust the parameters based on your specific needs and the capabilities of your hardware.
 
 ## Notes
