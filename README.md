@@ -54,7 +54,7 @@ Run.bat
 
 Certainly! Below is a list of parameters you can choose when configuring the FFmpeg command for video compression, along with brief descriptions of each parameter. You can adjust these based on your specific requirements for quality, speed, and file size.
 
-### Here some List of FFmpeg Parameters to Choose :
+## Here some List of FFmpeg Parameters to Choose :
 
 1. **Input File**:
    - `-i <input_file>`: Specify the input video file path.
