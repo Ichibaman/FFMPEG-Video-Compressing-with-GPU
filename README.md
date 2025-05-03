@@ -5,15 +5,18 @@ This PowerShell script compresses video files in a specified directory and its s
 ## Features
 
 - Checks if FFmpeg is installed and installs it if not.
+- https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl-shared.zip
 - Recursively processes video files in the specified directory.
 - Compresses videos and saves them in a separate "compressed" directory.
 - Logs the output of the compression process.
 - Allows stopping the script gracefully using a control file or Ctrl+C.
+## Important Note
 
+**WARNING**: This script will **delete** the original video files after successful compression. If there is an error during compression, the original file will be retained. Please ensure you have backups of your original files if needed.
 ## Prerequisites
 
 - **PowerShell**: This script is designed to run in a PowerShell environment.
-- **7-Zip**: Required for extracting the FFmpeg archive. Ensure it is installed and the path is correct in the script.
+- **7-Zip**: Required for extracting the FFmpeg archive. Ensure it is installed and the path is correct in the script. 
 ```
 C:\Program Files\7-Zip\7z.exe
 ```
@@ -30,7 +33,7 @@ git clone https://github.com/Ichibaman/FFMPEG-Video-Compressing-with-GPU.git
 
 ### Step 2: Copy Video Files
 
-Copy and paste the video files you want to compress into the same directory where the `compressing.ps1` script is located.
+Copy and paste the video files you want to compress into the same directory where the `compressing.ps1` script is located. 
 
 ### Step 3: Open PowerShell
 
@@ -132,7 +135,7 @@ Here are a few example combinations of parameters you might choose based on diff
    ```bash
    ffmpeg -i input.mp4 -c:v h264_nvenc -preset fast -b:v 5M -r 30 -c:a copy output.mp4
    ```
-   
+
 When configuring the FFmpeg command, consider the trade-offs between quality, file size, and processing speed. Adjust the parameters based on your specific needs and the capabilities of your hardware.
 
 ## Notes
