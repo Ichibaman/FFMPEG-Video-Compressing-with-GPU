@@ -23,7 +23,6 @@ Clone this repository to your local machine using the following command:
 
 ```bash
 git clone https://github.com/yourusername/repository-name.git
-cd repository-name
 ```
 
 ### Step 2: Open PowerShell
