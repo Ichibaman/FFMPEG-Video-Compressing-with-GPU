@@ -10,8 +10,9 @@ This PowerShell script compresses video files in a specified directory and its s
 - Logs the output of the compression process.
 - Allows stopping the script gracefully using a control file or Ctrl+C.
 
->##IMPORTANT NOTE
->**WARNING**: This script will **delete** the original video files after successful compression. If there is an error during compression, the original file will be retained. Please ensure you have backups of your original files if needed.
+## IMPORTANT NOTE
+**WARNING**: This script will **delete** the original video files after successful compression. If there is an error during compression, the original file will be retained. Please ensure you have backups of your original files if needed.
+
 ## Prerequisites
 
 - **PowerShell**: This script is designed to run in a PowerShell environment.
