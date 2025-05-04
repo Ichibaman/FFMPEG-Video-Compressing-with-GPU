@@ -1,4 +1,4 @@
-# Video Compression Script
+# Video Compressing Script
 
 This PowerShell script compresses video files in a specified directory and its subdirectories using FFmpeg. It supports `.mp4` and `.mkv` formats and utilizes NVIDIA's hardware acceleration for faster processing.
 
